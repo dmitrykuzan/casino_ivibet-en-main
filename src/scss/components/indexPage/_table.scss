@@ -1,0 +1,20 @@
+.table {
+
+  &__title {
+    font-size: fluid-font(5.2rem, 2.6rem);
+    text-align: center;
+  }
+
+  &__text {
+    margin-bottom: 5rem;
+    text-align: center;
+
+    @media (max-width: em(575)) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__link {
+    margin: 0 auto;
+  }
+}

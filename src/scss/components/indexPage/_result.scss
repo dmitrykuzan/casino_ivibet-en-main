@@ -1,0 +1,36 @@
+.result {
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: em(992)) {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    margin-right: 2.5rem;
+    max-width: 63rem;
+
+    @media (max-width: em(1200)) {
+      max-width: 50rem;
+    }
+
+    @media (max-width: em(992)) {
+      margin-right: initial;
+      margin-bottom: 3rem;
+      max-width: initial;
+    }
+  }
+
+  &__image {
+    max-width: 63rem;
+    filter: drop-shadow(1px 46px 45px rgba(39, 55, 62, 0.25));
+
+    img {
+      border-radius: 2.4rem;
+    }
+  }
+}
+

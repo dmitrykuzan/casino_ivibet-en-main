@@ -1,0 +1,14 @@
+.live {
+  &__text {
+    margin-bottom: 5rem;
+
+    p:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: em(575)) {
+      margin-bottom: 3rem;
+    }
+  }
+}
+

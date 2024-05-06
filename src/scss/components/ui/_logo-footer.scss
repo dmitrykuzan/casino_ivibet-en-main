@@ -1,0 +1,8 @@
+.logo-footer {
+  max-width: 13.5rem;
+
+  @media (max-width: em(575)) {
+    max-width: 10.6rem;
+    max-height: 3rem;
+  }
+}

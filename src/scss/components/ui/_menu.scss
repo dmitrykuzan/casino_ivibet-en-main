@@ -1,0 +1,89 @@
+$burgerMQ: em(1200);
+
+.menu {
+  margin-left: 14rem;
+
+  @media (max-width: em(1240)) {
+    margin-right: 2rem;
+  }
+
+  @media (max-width: em(1200)) {
+    margin-right: 0 !important;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $burgerMQ) {
+      flex-direction: column;
+      margin: auto;
+      padding-block: 4rem;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background-color: var(--clr-primary-400);
+      transform: translate(-50%, 0);
+      transition: width 0.3s;
+    }
+
+    &:hover::before {
+      width: 100%;
+      transition: width 0.3s;
+    }
+
+    &:not(:last-child) {
+      margin-right: 3rem;
+
+      @media (max-width: $burgerMQ) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+      }
+    }
+
+    a {
+      font-weight: 500;
+      color: var(--clr-default-400);
+
+      @media (max-width: em(1200)) {
+        font-weight: 600;
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  @media (max-width: $burgerMQ) {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    max-width: 32rem;
+    background-color: var(--clr-default-200);
+    transition: right var(--transition);
+
+    &--active {
+      right: 0;
+      transition: right var(--transition);
+    }
+  }
+
+  .login {
+    display: none;
+    @media (max-width: em(575)) {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.footer {
+  margin-bottom: 15rem;
+
+  @media (max-width: em(992)) {
+    margin-bottom: 8rem;
+  }
+
+  @media (max-width: em(575)) {
+    margin-bottom: 5rem;
+  }
+
+  &__wrapper-logo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+
+    @media (max-width: em(575)) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__text {
+    margin-bottom: 5rem;
+    font-size: 1.6rem;
+    color: var(--clr-default-900);
+
+    p:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: em(575)) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__license {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}

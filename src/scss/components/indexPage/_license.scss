@@ -1,0 +1,12 @@
+.license {
+
+  &__title {
+    font-size: fluid-font(5.2rem, 2.6rem);
+  }
+
+  &__text {
+    p:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+}

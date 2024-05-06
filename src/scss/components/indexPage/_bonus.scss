@@ -1,0 +1,123 @@
+.bonus {
+  position: relative;
+  top: -28rem;
+  padding-top: 46rem;
+  padding-bottom: 47rem;
+  color: var(--clr-default-200);
+
+  @media (max-width: em(1500)) {
+    padding-top: 37rem;
+    padding-bottom: 48rem;
+  }
+
+  @media (max-width: em(1200)) {
+    top: initial;
+    margin-top: 8rem;
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+    background-color: var(--clr-default-400);
+  }
+
+  @media (max-width: em(992)) {
+    margin-top: 6rem;
+  }
+
+  @media (max-width: em(767)) {
+    padding-bottom: 3rem !important;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: -1;
+    width: 192rem;
+    height: 100%;
+    background-image: url(../img/bonus/bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateX(-50%);
+
+    @media (max-width: em(1200)) {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+  }
+
+  &__title {
+    margin-bottom: 5rem;
+    font-size: fluid-font(5.2rem, 2.6rem);
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+
+    @media (max-width: em(992)) {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    max-width: 63rem;
+
+    &:first-child {
+      margin-right: 3rem;
+
+      @media (max-width: em(992)) {
+        margin-right: initial;
+        margin-bottom: 5rem;
+      }
+
+      @media (max-width: em(767)) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    @media (max-width: em(992)) {
+      max-width: initial;
+    }
+  }
+
+  &__text {
+    margin-bottom: 2.5rem;
+  }
+
+  &__list {
+    list-style: disc;
+    padding-left: 2rem;
+    font-weight: 500;
+  }
+
+  &__item {
+    line-height: 140%;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__link {
+    margin: 0 auto;
+  }
+
+  &__banner {
+    position: absolute;
+    left: 50%;
+    bottom: 9.5rem;
+    margin: initial;
+    transform: translateX(-50%);
+
+    @media (max-width: em(1200)) {
+      position: initial;
+      left: initial;
+      bottom: initial;
+      margin: 6rem auto 6rem;
+      transform: initial;
+    }
+  }
+}

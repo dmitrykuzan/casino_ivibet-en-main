@@ -1,0 +1,91 @@
+.platform {
+  &__wrapper {
+    position: relative;
+    display: flex;
+
+    @media (max-width: em(1220)) {
+      display: block;
+    }
+  }
+
+  &__title {
+    font-size: fluid-font(5.2rem, 2.6rem);
+  }
+
+  &__content {
+    max-width: 74rem;
+
+    @media (max-width: em(1220)) {
+      max-width: initial;
+    }
+  }
+
+  &__text {
+    margin-bottom: 5rem;
+
+    @media (max-width: em(767)) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__table {
+    table {
+      td {
+        line-height: 140%;
+
+        @media (max-width: em(992)) {
+          &:first-child {
+            min-width: 14rem;
+          }
+        }
+
+        @media (max-width: em(575)) {
+          &:first-child {
+            min-width: 8rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    right: -23rem;
+    width: 72rem;
+    height: 98rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 0;
+      width: 53rem;
+      height: 32.8rem;
+      background-color: var(--clr-primary-400);
+      filter: blur(14rem);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    @media (max-width: em(1710)) {
+      right: -10rem;
+      top: 21rem;
+      width: 60rem;
+    }
+
+    @media (max-width: em(1480)) {
+      right: 3rem;
+      top: 26rem;
+      width: 39rem;
+
+      &::after {
+        width: 38rem;
+      }
+    }
+
+    @media (max-width: em(1220)) {
+      display: none;
+    }
+  }
+}

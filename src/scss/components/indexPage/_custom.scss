@@ -1,0 +1,19 @@
+.custom {
+
+  &__title {
+    font-size: fluid-font(5.2rem, 2.6rem);
+  }
+
+  &__text {
+    margin-bottom: 5rem;
+
+    p:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: em(575)) {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
